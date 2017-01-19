@@ -1,1 +1,14 @@
 # iCarouselDemo
+
+iCarousel的原理
+
+iCarousel并不是一个UIScrollView 也并没有包含任何UIScrollView作为subView
+iCarousel通过UIPanGestureRecognizer来计算和维护scrollOffset这个变量
+iCarousel通过scrollOffset来驱动整个动画过程
+iCarousel本身并不会改变itemView的位置 而是靠修改itemView的layer.transform来实现位移和形变
+
+这就是iCarousel的一个重要的设计理念 iCarousel虽然跟UIScrollView一样都各自会维护自己的scrollOffset 但是UIScrollView在滑动的时候改变的是自己的ViewPort 就是说 UIScrollView上的itemView是真正被放置到了他被设置的位置上 只是UIScrollView通过移动显示的窗口 造成了滑动的感觉(如果不理解 请看这篇文章)
+
+但是iCarousel并不是这样 iCarousel会把所有的itemView都居中重叠放置在一起 当scrollOffset变化时 iCarousel会计算每个itemView的offset 并通过- (CATransform3D)carousel:(iCarousel *)carousel itemTransformForOffset:(CGFloat)offset baseTransform:(CATransform3D)transform这个函数来对每个itemView进行形变 通过形变来造成滑动的效果
+
+[参考](http://www.cocoachina.com/ios/20150804/12878.html)
