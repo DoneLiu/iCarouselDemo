@@ -15,6 +15,10 @@
 		13A185E21E305DE5006BCCF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A185E01E305DE5006BCCF9 /* LaunchScreen.storyboard */; };
 		13A185ED1E305DE5006BCCF9 /* iCarouselDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A185EC1E305DE5006BCCF9 /* iCarouselDemoTests.m */; };
 		13A185F81E305DE5006BCCF9 /* iCarouselDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A185F71E305DE5006BCCF9 /* iCarouselDemoUITests.m */; };
+		13DF42701E30C40F007E68CF /* introduction_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DF426F1E30C40F007E68CF /* introduction_1@3x.png */; };
+		13DF42721E30C416007E68CF /* introduction_2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DF42711E30C416007E68CF /* introduction_2@3x.png */; };
+		13DF42741E30C41F007E68CF /* introduction_3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DF42731E30C41F007E68CF /* introduction_3@3x.png */; };
+		13DF42761E30C426007E68CF /* introduction_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DF42751E30C426007E68CF /* introduction_bg@3x.png */; };
 		79A6AC628959B271368F43D9 /* libPods-iCarouselDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9F9D7663B4C5BFA64A2168 /* libPods-iCarouselDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +57,10 @@
 		13A185F31E305DE5006BCCF9 /* iCarouselDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCarouselDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A185F71E305DE5006BCCF9 /* iCarouselDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCarouselDemoUITests.m; sourceTree = "<group>"; };
 		13A185F91E305DE5006BCCF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13DF426F1E30C40F007E68CF /* introduction_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "introduction_1@3x.png"; sourceTree = "<group>"; };
+		13DF42711E30C416007E68CF /* introduction_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "introduction_2@3x.png"; sourceTree = "<group>"; };
+		13DF42731E30C41F007E68CF /* introduction_3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "introduction_3@3x.png"; sourceTree = "<group>"; };
+		13DF42751E30C426007E68CF /* introduction_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "introduction_bg@3x.png"; sourceTree = "<group>"; };
 		22E5FCC7BCD0DEBCE599DCCF /* Pods-iCarouselDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCarouselDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iCarouselDemo/Pods-iCarouselDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BC9F9D7663B4C5BFA64A2168 /* libPods-iCarouselDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iCarouselDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,6 +120,10 @@
 				13A185D61E305DE5006BCCF9 /* AppDelegate.m */,
 				13A185D81E305DE5006BCCF9 /* ViewController.h */,
 				13A185D91E305DE5006BCCF9 /* ViewController.m */,
+				13DF426F1E30C40F007E68CF /* introduction_1@3x.png */,
+				13DF42711E30C416007E68CF /* introduction_2@3x.png */,
+				13DF42731E30C41F007E68CF /* introduction_3@3x.png */,
+				13DF42751E30C426007E68CF /* introduction_bg@3x.png */,
 				13A185DB1E305DE5006BCCF9 /* Main.storyboard */,
 				13A185DE1E305DE5006BCCF9 /* Assets.xcassets */,
 				13A185E01E305DE5006BCCF9 /* LaunchScreen.storyboard */,
@@ -274,8 +286,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				13A185E21E305DE5006BCCF9 /* LaunchScreen.storyboard in Resources */,
+				13DF42721E30C416007E68CF /* introduction_2@3x.png in Resources */,
+				13DF42701E30C40F007E68CF /* introduction_1@3x.png in Resources */,
+				13DF42741E30C41F007E68CF /* introduction_3@3x.png in Resources */,
 				13A185DF1E305DE5006BCCF9 /* Assets.xcassets in Resources */,
 				13A185DD1E305DE5006BCCF9 /* Main.storyboard in Resources */,
+				13DF42761E30C426007E68CF /* introduction_bg@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +600,7 @@
 				13A185FE1E305DE5006BCCF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13A185FF1E305DE5006BCCF9 /* Build configuration list for PBXNativeTarget "iCarouselDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +609,7 @@
 				13A186011E305DE5006BCCF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13A186021E305DE5006BCCF9 /* Build configuration list for PBXNativeTarget "iCarouselDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +618,7 @@
 				13A186041E305DE5006BCCF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

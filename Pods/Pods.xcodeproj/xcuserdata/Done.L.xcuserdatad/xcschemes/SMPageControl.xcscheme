@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '62BD8CD75BF79B9970CB6C28D2BD7BB7'
-               BlueprintName = 'Pods-iCarouselDemo'
+               BlueprintIdentifier = 'D18A44CC209BF23E80E3DCD4DDE165C6'
+               BlueprintName = 'SMPageControl'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-iCarouselDemo.a'>
+               BuildableName = 'libSMPageControl.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

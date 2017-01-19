@@ -1,12 +1,21 @@
 PODS:
+  - EAIntroView (2.10.0):
+    - EARestrictedScrollView (~> 1.1.0)
+  - EARestrictedScrollView (1.1.0)
   - iCarousel (1.8)
+  - SMPageControl (1.2)
 
 DEPENDENCIES:
+  - EAIntroView (~> 2.10.0)
   - iCarousel (= 1.8)
+  - SMPageControl (= 1.2)
 
 SPEC CHECKSUMS:
+  EAIntroView: 3494b7bbd1212e3a4f7e8d16194a1b00e7b9abb2
+  EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
   iCarousel: f3e180611656b4b83e9f36e55c6f95a73b714b81
+  SMPageControl: 922892813001cfaf059e86e6801f46a967e9ee29
 
-PODFILE CHECKSUM: 40fe371a34a18fa3acc1ac1df0191cc657145342
+PODFILE CHECKSUM: 5f778c8a611a8713564e992f46df645fc5789674
 
 COCOAPODS: 1.1.1

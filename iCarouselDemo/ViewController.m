@@ -10,7 +10,11 @@
 
 #import "iCarousel.h"
 
-@interface ViewController () <iCarouselDataSource, iCarouselDelegate>
+#import "EAIntroPage.h"
+#import "EAIntroView.h"
+#import "SMPageControl.h"
+
+@interface ViewController () <iCarouselDataSource, iCarouselDelegate, EAIntroDelegate>
 
 @property (nonatomic, strong) iCarousel *carousel;
 @property (nonatomic, assign) CGSize cardSize;
@@ -23,17 +27,39 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    CGFloat cardWidth = [UIScreen mainScreen].bounds.size.width * 5.0 / 7.0;
-    self.cardSize = CGSizeMake(cardWidth, cardWidth * 16.0f / 9.0f);
-    self.view.backgroundColor = [UIColor blackColor];
+    EAIntroPage *page1 = [EAIntroPage page];
+    page1.bgImage = [UIImage imageNamed:@"introduction_bg@3x.png"];
+    page1.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"introduction_1@3x.png"]];
     
-    self.carousel = [[iCarousel alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    [self.view addSubview:self.carousel];
-    self.carousel.delegate = self;
-    self.carousel.dataSource = self;
-    self.carousel.type = iCarouselTypeCustom;
-    self.carousel.bounceDistance = 0.2f;
-    self.carousel.scrollSpeed = 1.0f;
+    EAIntroPage *page2 = [EAIntroPage page];
+    page2.bgImage = [UIImage imageNamed:@"introduction_bg@3x.png"];
+    page2.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"introduction_2@3x.png"]];
+    
+    EAIntroPage *page3 = [EAIntroPage page];
+    page3.bgImage = [UIImage imageNamed:@"introduction_bg@3x.png"];
+    page3.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"introduction_3@3x.png"]];
+    
+    EAIntroView *introView = [[EAIntroView alloc] initWithFrame:[UIScreen mainScreen].bounds andPages:@[page1, page2, page3]];
+    introView.delegate = self;
+    introView.pageControl = (UIPageControl *)[[SMPageControl alloc] init];
+    
+    // show skipButton only on 3rd page + animation
+    introView.skipButton.alpha = 0.f;
+    introView.skipButton.enabled = NO;
+    page3.onPageDidAppear = ^{
+        introView.skipButton.enabled = YES;
+        [UIView animateWithDuration:0.3f animations:^{
+            introView.skipButton.alpha = 1.f;
+        }];
+    };
+    page3.onPageDidDisappear = ^{
+        introView.skipButton.enabled = NO;
+        [UIView animateWithDuration:0.3f animations:^{
+            introView.skipButton.alpha = 0.f;
+        }];
+    };
+    
+    [introView showInView:self.view animateDuration:0.3f];
 }
 
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
@@ -103,6 +129,20 @@
     }
     
     return 1 / (z - n * offset) - 1 / z;
+}
+
+- (void)introDidFinish:(EAIntroView *)introView wasSkipped:(BOOL)wasSkipped {
+    CGFloat cardWidth = [UIScreen mainScreen].bounds.size.width * 5.0 / 7.0;
+    self.cardSize = CGSizeMake(cardWidth, cardWidth * 16.0f / 9.0f);
+    self.view.backgroundColor = [UIColor blackColor];
+    
+    self.carousel = [[iCarousel alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.view addSubview:self.carousel];
+    self.carousel.delegate = self;
+    self.carousel.dataSource = self;
+    self.carousel.type = iCarouselTypeCustom;
+    self.carousel.bounceDistance = 0.2f;
+    self.carousel.scrollSpeed = 1.0f;
 }
 
 - (void)didReceiveMemoryWarning {

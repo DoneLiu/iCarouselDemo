@@ -4,7 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>EAIntroView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>EARestrictedScrollView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-iCarouselDemo.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SMPageControl.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4FDEA61B67C88BF81A6ACF6B1486A235</key>
+		<key>15771CDB60DFAA769E27961D321E12C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>62BD8CD75BF79B9970CB6C28D2BD7BB7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D18A44CC209BF23E80E3DCD4DDE165C6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DC7A51F0B370F9976D21032BDDB7222E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E079843C9C79118289CFD9619070B0B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
