@@ -12,3 +12,4 @@ iCarousel本身并不会改变itemView的位置 而是靠修改itemView的layer.
 但是iCarousel并不是这样 iCarousel会把所有的itemView都居中重叠放置在一起 当scrollOffset变化时 iCarousel会计算每个itemView的offset 并通过- (CATransform3D)carousel:(iCarousel *)carousel itemTransformForOffset:(CGFloat)offset baseTransform:(CATransform3D)transform这个函数来对每个itemView进行形变 通过形变来造成滑动的效果
 
 [参考](http://www.cocoachina.com/ios/20150804/12878.html)
+
